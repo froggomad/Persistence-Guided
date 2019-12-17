@@ -12,6 +12,9 @@
 		464F0EDF23A934B8005EA231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464F0EDD23A934B8005EA231 /* Main.storyboard */; };
 		464F0EE123A934B8005EA231 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 464F0EE023A934B8005EA231 /* Assets.xcassets */; };
 		464F0EE423A934B8005EA231 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464F0EE223A934B8005EA231 /* LaunchScreen.storyboard */; };
+		B979D8E323A94626001C3DBD /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = B979D8E223A94626001C3DBD /* Star.swift */; };
+		B979D8E723A947C2001C3DBD /* StarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B979D8E623A947C2001C3DBD /* StarController.swift */; };
+		B979D8E923A94BB1001C3DBD /* StarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B979D8E823A94BB1001C3DBD /* StarsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		464F0EE023A934B8005EA231 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		464F0EE323A934B8005EA231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		464F0EE523A934B8005EA231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B979D8E223A94626001C3DBD /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		B979D8E623A947C2001C3DBD /* StarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarController.swift; sourceTree = "<group>"; };
+		B979D8E823A94BB1001C3DBD /* StarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +60,9 @@
 		464F0ED623A934B8005EA231 /* Stars */ = {
 			isa = PBXGroup;
 			children = (
-				464F0EEC23A9351A005EA231 /* Storyboards */,
+				B979D8DF23A943FA001C3DBD /* Model */,
+				B979D8E023A9440A001C3DBD /* View */,
+				B979D8E123A94411001C3DBD /* Controller */,
 				464F0EEB23A9350F005EA231 /* Resources */,
 			);
 			path = Stars;
@@ -78,6 +86,47 @@
 				464F0EE223A934B8005EA231 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B979D8DF23A943FA001C3DBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B979D8E223A94626001C3DBD /* Star.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B979D8E023A9440A001C3DBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				464F0EEC23A9351A005EA231 /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B979D8E123A94411001C3DBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B979D8E523A9479B001C3DBD /* View Controllers */,
+				B979D8E423A94774001C3DBD /* Model Controllers */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B979D8E423A94774001C3DBD /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B979D8E623A947C2001C3DBD /* StarController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		B979D8E523A9479B001C3DBD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B979D8E823A94BB1001C3DBD /* StarsViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B979D8E323A94626001C3DBD /* Star.swift in Sources */,
+				B979D8E723A947C2001C3DBD /* StarController.swift in Sources */,
+				B979D8E923A94BB1001C3DBD /* StarsViewController.swift in Sources */,
 				464F0ED823A934B8005EA231 /* AppDelegate.swift in Sources */,
 				464F0EDA23A934B8005EA231 /* SceneDelegate.swift in Sources */,
 			);

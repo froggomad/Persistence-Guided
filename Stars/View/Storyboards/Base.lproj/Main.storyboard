@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Stars View Controller-->
         <scene sceneID="Q1y-mz-q0S">
             <objects>
-                <viewController id="Vpf-MY-dgr" sceneMemberID="viewController">
+                <viewController id="Vpf-MY-dgr" customClass="StarsViewController" customModule="Stars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mJA-fR-5AG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,41 +30,29 @@
                                 <rect key="frame" x="0.0" y="206" width="414" height="690"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StarCell" rowHeight="55" id="DhI-oJ-ofP" customClass="StarTableViewCell" customModule="Stars" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StarCell" textLabel="GTV-gz-mnQ" detailTextLabel="8ze-HJ-MAd" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="DhI-oJ-ofP" customClass="StarTableViewCell" customModule="Stars" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DhI-oJ-ofP" id="8XJ-ti-b1M">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nAv-OI-ACo">
-                                                    <rect key="frame" x="20" y="6" width="374" height="43"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m79-A0-pJl">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VU9-vp-jaE">
-                                                            <rect key="frame" x="0.0" y="22.5" width="374" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GTV-gz-mnQ">
+                                                    <rect key="frame" x="20" y="9" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8ze-HJ-MAd">
+                                                    <rect key="frame" x="20" y="30.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="nAv-OI-ACo" secondAttribute="trailing" constant="20" id="Eix-Ff-2uQ"/>
-                                                <constraint firstItem="nAv-OI-ACo" firstAttribute="leading" secondItem="8XJ-ti-b1M" secondAttribute="leading" constant="20" id="FFI-IK-yaA"/>
-                                                <constraint firstItem="nAv-OI-ACo" firstAttribute="centerY" secondItem="8XJ-ti-b1M" secondAttribute="centerY" id="OEo-km-2s5"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="distanceLabel" destination="VU9-vp-jaE" id="cQN-wm-QEt"/>
-                                            <outlet property="nameLabel" destination="m79-A0-pJl" id="r7V-jx-aRF"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -74,10 +62,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gC-K8-Cwu">
                                         <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
                                         <state key="normal" title="Print Stars"/>
+                                        <connections>
+                                            <action selector="printStarsTapped:" destination="Vpf-MY-dgr" eventType="touchUpInside" id="6zs-BF-eZx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jw-eC-S0e">
                                         <rect key="frame" x="191" y="0.0" width="183" height="30"/>
                                         <state key="normal" title="Create"/>
+                                        <connections>
+                                            <action selector="createStarsTapped:" destination="Vpf-MY-dgr" eventType="touchUpInside" id="cpq-Ma-L5A"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -100,6 +94,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MWy-D2-KTO"/>
                     </view>
+                    <connections>
+                        <outlet property="distanceTextField" destination="FuH-BF-oye" id="YMQ-aS-pfc"/>
+                        <outlet property="nameTextField" destination="vrZ-lQ-2Aq" id="r93-iQ-ffH"/>
+                        <outlet property="tableView" destination="Cve-HA-K9h" id="QXs-QE-98Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hu-x2-wlF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
